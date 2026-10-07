@@ -1,7 +1,9 @@
 package mmu.coffeeshop;
-import org.junit.*;
+import org.junit.Assert;
+import org.junit.Test;
 
-import mmu.coffeeshop.menu.*;
+import mmu.coffeeshop.menu.MainMenu;
+import mmu.coffeeshop.menu.Menu;
 
 public class IntegrationTests {
 
@@ -30,6 +32,7 @@ public class IntegrationTests {
         
         Assert.assertEquals(1, basket.getItemCount());
         Assert.assertEquals("Tea", basket.getItems().get(0).getName());
+        Assert.assertEquals(149, basket.getTotalPrice());
     }
 
     @Test
